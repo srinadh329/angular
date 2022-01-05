@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import {ImageService} from './image.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormDirective } from './form.directive';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormDirective,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
