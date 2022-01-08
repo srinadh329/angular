@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+content:any;
   constructor(private router:Router,) { }
 
   ngOnInit(): void {
@@ -16,4 +16,5 @@ export class HomeComponent implements OnInit {
   test(){
     this.router.navigate(['/home/123'],{queryParams:{'venkatesh':'test','date':"12-1-2022"}})
   }
+
 }
